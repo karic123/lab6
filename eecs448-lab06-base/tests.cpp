@@ -78,7 +78,7 @@ void tests::RunTests()
               std::cout<<F;
             }
 
-          std::cout<<"TEST 7: makes linkedlist with values 5,6,7 and uses search to see if 6 is in the list: ";
+          std::cout<<"TEST 7: makes linkedlist using addFront with values 5,6,7 and uses search to see if 6 is in the list: ";
           if (test7()==true)
             {
               std::cout<<P;
@@ -88,7 +88,7 @@ void tests::RunTests()
               std::cout<<F;
             }
 
-            std::cout<<"TEST 8: makes linkedlist with values 5,6,7 and uses search to see if 9 is NOT in the list: ";
+            std::cout<<"TEST 8: makes linkedlist using addFront with values 5,6,7 and uses search to see if 9 is NOT in the list: ";
             if (test8()==false)
               {
                 std::cout<<P;
@@ -117,6 +117,64 @@ void tests::RunTests()
                 {
                   std::cout<<F;
                 }
+
+              std::cout<<"TEST 11: makes linkedlist using addBack with values 5,6,7 and uses search to see if 6 is in the list: ";
+              if (test11()==true)
+                {
+                  std::cout<<P;
+                }
+              else
+                {
+                  std::cout<<F;
+                }
+
+                std::cout<<"TEST 12: makes linkedlist using addBack with values 5,6,7 and uses search to see if 9 is NOT in the list: ";
+                if (test12()==false)
+                  {
+                    std::cout<<P;
+                  }
+                else
+                  {
+                    std::cout<<F;
+                  }
+                std::cout<<"TEST 13: removes back* and checks to see that the value in the new back position is correct: ";
+                if (test13()==true)
+                  {
+                    std::cout<<P;
+                  }
+                else
+                  {
+                    std::cout<<F;
+                  }
+
+                  std::cout<<"TEST 14: removes front and checks if new front is correct: ";
+                  if (test14()==true)
+                    {
+                      std::cout<<P;
+                    }
+                  else
+                    {
+                      std::cout<<F;
+                    }
+                    std::cout<<"TEST 15: removes back and searches if its value is gone from the linked list: ";
+                    if (test15()==true)
+                      {
+                        std::cout<<F;
+                      }
+                    else
+                      {
+                        std::cout<<P;
+                      }
+                      std::cout<<"TEST 16: removes front and searches if its value is gone from the linked list: ";
+                      if (test16()==true)
+                        {
+                          std::cout<<F;
+                        }
+                      else
+                        {
+                          std::cout<<P;
+                        }
+
 }
 
 bool tests::test1()
@@ -262,3 +320,82 @@ bool tests::test7()
       return false;
     }
   }
+
+  bool tests::test11()
+    {
+      LinkedListOfInts mylist;
+      mylist.addBack(5);
+      mylist.addBack(6);
+      mylist.addBack(7);
+
+      return(mylist.search(6));
+    }
+
+    bool tests::test12()
+      {
+        LinkedListOfInts mylist;
+        mylist.addBack(5);
+        mylist.addBack(6);
+        mylist.addBack(7);
+
+        return(mylist.search(9));
+      }
+
+      bool tests::test13()
+      {
+        LinkedListOfInts mylist;
+        mylist.addFront(1);
+        mylist.addFront(2);
+        mylist.addFront(3);
+        mylist.removeBack();
+
+        std::vector<int> myVector = mylist.toVector();
+        if (myVector.at(1) == 2)
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+      }
+
+      bool tests::test14()
+      {
+        LinkedListOfInts mylist;
+        mylist.addFront(1);
+        mylist.addFront(2);
+        mylist.addFront(3);
+        mylist.removeFront();
+
+        std::vector<int> myVector = mylist.toVector();
+        if (myVector.at(0) == 2)
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+      }
+      bool tests::test15()
+        {
+          LinkedListOfInts mylist;
+          mylist.addBack(5);
+          mylist.addBack(6);
+          mylist.addBack(7);
+          mylist.removeBack();
+
+          return(mylist.search(7));
+        }
+
+        bool tests::test16()
+          {
+            LinkedListOfInts mylist;
+            mylist.addBack(5);
+            mylist.addBack(6);
+            mylist.addBack(7);
+            mylist.removeFront();
+
+            return(mylist.search(5));
+          }

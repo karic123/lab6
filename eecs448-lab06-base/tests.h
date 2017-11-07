@@ -53,5 +53,28 @@ bool test10();
 //checks to see if last value is 9 after addBack(9).
 //T if correct, F otherwise
 
+bool test11();
+//checks to see if 6 is in the list when we add it using addBack
+//T if 6 is there, F otherwise
+
+bool test12();
+//Checks to see if 9 is not in the list when we don't add it using addBack
+//T if not in list, F otherwise
+
+bool test13();
+//checks if the "last" element is correct after removeBack
+//T if correct, F otherwise
+
+bool test14();
+//checks if the new front is correct after using removeFront
+//T if correct, F otherwise
+
+bool test15();
+//removes back and checks if value is still in linked list
+// T if value is not there, F otherwise
+
+bool test16();
+//removes front and checks if value is still in linked list
+// T if value is not there, F otherwise
 };
 #endif
