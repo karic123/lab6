@@ -1,0 +1,24 @@
+TEST 1: the linkedlist is empty upon creation using isEmpty(): PASSED! 
+TEST 2: size = 0 when a new list is created: PASSED! 
+TEST 3: adds 3 nodes using addFront. Size returns correct value: PASSED! 
+TEST 4: adds 3 nodes using addBack. Size returns correct value: PASSED! 
+TEST 5: adds 3 nodes. Removes one node using removeFront. Size returns correct value: FAILED! 
+TEST 6: adds 3 nodes. Removes one node using removeBack. Size returns correct value: FAILED! 
+TEST 7: makes linkedlist using addFront with values 5,6,7 and uses search to see if 6 is in the list: PASSED! 
+TEST 8: makes linkedlist using addFront with values 5,6,7 and uses search to see if 9 is NOT in the list: PASSED! 
+TEST 9: Checks to see if first value in list is 3 after using addFront(3): PASSED! 
+TEST 10: Checks to see if last value in list is 9 after using addBack(9): FAILED! 
+TEST 11: makes linkedlist using addBack with values 5,6,7 and uses search to see if 6 is in the list: PASSED! 
+TEST 12: makes linkedlist using addBack with values 5,6,7 and uses search to see if 9 is NOT in the list: PASSED! 
+TEST 13: removes back* and checks to see that the value in the new back position is correct: PASSED! 
+TEST 14: removes front and checks if new front is correct: FAILED! 
+TEST 15: removes back and searches if its value is gone from the linked list: FAILED! 
+TEST 16: removes front and searches if its value is gone from the linked list: FAILED! 
+
+
+
+Bug 1: The removeBack() doesn't remove anything
+Bug 2: The removeFront() doesnt't remove anything
+Bug 3: addBack() doesn't add to the correct place
+
+
